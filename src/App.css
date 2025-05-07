@@ -1,0 +1,389 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f5f5;
+}
+
+/* Navbar styling */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  color: white;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #00b4d8;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #5ccfd3;
+}
+
+/* Hero section */
+.hero {
+  background: url('C:/Users/Ramya/reactpro/upscalemedia-transformed.jpeg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero button {
+  padding: 0.8rem 1.5rem;
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: #48cae4;
+}
+
+/* Modal styling */
+.form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Form box */
+.form-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  width: 500px;
+  min-height: 500px;
+  color: white;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 40px; /* avoid overlap with arrow */
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Back button */
+.back-button {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* Input row styles */
+.input-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.input-row label {
+  width: 60px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* Input group */
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-weight: bold;
+  width: 80px;
+  color: white;
+  text-align: left;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+}
+
+/* Horizontal input group */
+.input-group-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: white;
+  height: 20px;
+  padding-top: 15px;
+}
+
+.input-group-horizontal label {
+  width: 200px;
+}
+
+/* Record button */
+.record-btn {
+  padding: 5px 20px;
+  background-color: #00bfff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.record-btn:hover {
+  background-color: #48cae4;
+}
+
+/* Transcript label */
+.transcript-label {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1px;
+  color: white;
+}
+
+/* Transcript box */
+.transcript-box {
+  width: 100%;
+  background: #ffffff22;
+  padding: 1px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: left;
+  min-height: 50px;
+  font-size: 15px;
+}
+
+
+
+/* Transcript header */
+.transcript-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Box Container - to arrange the two boxes side by side */
+.form-box-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  height: calc(100vh - 60px); /* Subtract the navbar height */
+  gap: 20px;
+}
+
+/* Individual form box */
+.form-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  width: 48%;  /* Ensures both boxes take up equal width */
+  color: white;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
+
+/* Title for both boxes */
+.transcript-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Transcript box */
+.transcript-box {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: left;
+  min-height: 10px; /* Adjust height of the transcription box */
+  font-size: 15px;
+  overflow-y: auto; /* Allows scrolling if content exceeds the box height */
+  margin-bottom: 20px; /* Adding margin below for space */
+  
+}
+
+
+
+
+
+/* Extract button styling */
+.extract-btn {
+  position: absolute;
+  bottom: 20px; /* Keep it 20px from the bottom */
+  right: 20px; /* Keep it 20px from the right */
+  background-color: #00bfff;
+  color: white;
+  padding: 10px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.extract-btn:hover {
+  background-color: #48cae4;
+}
+
+.entity-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.entity-table th, .entity-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.entity-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.entity-table th, .entity-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.entity-table th {
+  background-color: #00b4d8;
+  color: white;
+}
+
+.entity-table td {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.table-view-container {
+  padding: 20px;
+}
+
+.back-button {
+  font-size: 16px;
+  cursor: pointer;
+  color: #007bff;
+  border: none;
+  background: none;
+}
